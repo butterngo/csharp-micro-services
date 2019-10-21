@@ -1,0 +1,12 @@
+/.vs
+/src/CircuitBreaker/CSharp.Cricuit.Breaker/*
+/src/CircuitBreaker/CSharp.Cricuit.Breaker/obj
+/src/CircuitBreaker/CSharp.Cricuit.Breaker/bin
+/src/Core/CSharp.Core/obj
+/src/Core/CSharp.Core/bin
+/src/Core/CSharp.Utilities/obj
+/src/Core/CSharp.Utilities/bin
+/src/Services/OAuth/CSharp.OAuth.Server/obj
+/src/Services/OAuth/CSharp.OAuth.Server/bin
+/src/Webs/MvcClient/CSharp.MvcClient/obj
+/src/Webs/MvcClient/CSharp.MvcClient/bin
