@@ -10,3 +10,5 @@
 /src/Services/OAuth/CSharp.OAuth.Server/bin
 /src/Webs/MvcClient/CSharp.MvcClient/obj
 /src/Webs/MvcClient/CSharp.MvcClient/bin
+/src/Webs/src
+/src/Webs/vuejs-client/yarn.lock

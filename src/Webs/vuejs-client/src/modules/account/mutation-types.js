@@ -1,0 +1,1 @@
+export const LOAD_ALL_ACCOUNT = "LOAD_ALL_ACCOUNT";
