@@ -12,3 +12,7 @@
 /src/Webs/MvcClient/CSharp.MvcClient/bin
 /src/Webs/src
 /src/Webs/vuejs-client/yarn.lock
+/src/Webs/MvcClient/CSharp.Web.MVC/bin
+/src/Webs/MvcClient/CSharp.Web.MVC/obj
+/src/Webs/MvcClient/SCharp.Web.MVC.3.0/bin
+/src/Webs/MvcClient/SCharp.Web.MVC.3.0/wwwroot

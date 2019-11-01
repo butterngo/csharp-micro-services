@@ -1,88 +1,66 @@
+@{
+    Layout = null;
+}
 @model LoginViewModel
-
-<div class="login-page">
-    <div class="page-header">
-        <h1>Login</h1>
-    </div>
-
-    <partial name="_ValidationSummary" />
-
-    <div class="row">
-
-        @if (Model.EnableLocalLogin)
-        {
-            <div class="col-sm-6">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">Local Login</h3>
-                    </div>
-                    <div class="panel-body">
-
-                        <form asp-route="Login">
-                            <input type="hidden" asp-for="ReturnUrl" />
-
-                            <fieldset>
-                                <div class="form-group">
-                                    <label asp-for="Username"></label>
-                                    <input class="form-control" placeholder="Username" asp-for="Username" autofocus>
-                                </div>
-                                <div class="form-group">
-                                    <label asp-for="Password"></label>
-                                    <input type="password" class="form-control" placeholder="Password" asp-for="Password" autocomplete="off">
-                                </div>
-                                @if (Model.AllowRememberLogin)
-                                {
-                                    <div class="form-group login-remember">
-                                        <label asp-for="RememberLogin">
-                                            <input asp-for="RememberLogin">
-                                            <strong>Remember My Login</strong>
-                                        </label>
-                                    </div>
-                                }
-                                <div class="form-group">
-                                    <button class="btn btn-primary" name="button" value="login">Login</button>
-                                    <button class="btn btn-default" name="button" value="cancel">Cancel</button>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="https://www.c-sharp.vn/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>C-Sharp Viet Nam</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/idsr4/login.css" crossorigin="anonymous">
+</head>
+<body>
+    <div class="bg-image">
+        <div class="wrapper fadeInDown">
+            <div id="formContent">
+                <div class="fadeIn first">
+                    <img src="https://www.c-sharp.vn//img/logo.png" id="icon" alt="User Icon" />
                 </div>
-            </div>
-        }
-
-        @if (Model.VisibleExternalProviders.Any())
-        {
-            <div class="col-md-6 col-sm-6 external-providers">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h3 class="panel-title">External Login</h3>
+                @using (Html.BeginForm("Login", "Account"))
+                {
+                    @Html.AntiForgeryToken()
+                    @Html.HiddenFor(x => x.ReturnUrl)
+                    @Html.TextBoxFor(x => x.Username, new
+                    {
+                        @placeholder = "Email address",
+                        @class = "fadeIn second",
+                        @id = "login"
+                    })
+                    <div class="help-block">
+                        @Html.ValidationMessageFor(x => x.Username, string.Empty, new
+                        {
+                           @class = "cls-danger",
+                        })
                     </div>
-                    <div class="panel-body">
-                        <ul class="list-inline">
-                            @foreach (var provider in Model.VisibleExternalProviders)
-                            {
-                                <li>
-                                    <a class="btn btn-default"
-                                       asp-controller="External"
-                                       asp-action="Challenge"
-                                       asp-route-provider="@provider.AuthenticationScheme"
-                                       asp-route-returnUrl="@Model.ReturnUrl">
-                                        @provider.DisplayName
-                                    </a>
-                                </li>
-                            }
-                        </ul>
+                    @Html.PasswordFor(x => x.Password, new
+                    {
+                       @placeholder = "Password",
+                       @class = "fadeIn third",
+                       @id = "password"
+                    })
+                    <div class="help-block">
+                        @Html.ValidationMessageFor(x => x.Password, string.Empty, new
+                        {
+                           @class = "cls-danger",
+                        })
                     </div>
+                    <input type="submit" class="fadeIn fourth" value="Log In">
+                }
+                <div id="formFooter">
+                    <a class="underlineHover" href="#">Forgot Password?</a>
                 </div>
-            </div>
-        }
 
-        @if (!Model.EnableLocalLogin && !Model.VisibleExternalProviders.Any())
-        {
-            <div class="alert alert-warning">
-                <strong>Invalid login request</strong>
-                There are no login schemes configured for this client.
             </div>
-        }
+        </div>
     </div>
-</div>
+    <partial name="_Footer" />
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="/vendor/jquery.validate.min.js"></script>
+    <script src="/vendor/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>
+
+

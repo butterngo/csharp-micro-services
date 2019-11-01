@@ -17,19 +17,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Webs", "Webs", "{92415E98-7
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{F3241466-5490-4359-9292-881DDFEDE5F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Cricuit.Breaker", "src\CircuitBreaker\CSharp.Cricuit.Breaker\CSharp.Cricuit.Breaker.csproj", "{3708B5F8-060D-432B-8DF2-C25EF2D331F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Cricuit.Breaker", "src\CircuitBreaker\CSharp.Cricuit.Breaker\CSharp.Cricuit.Breaker.csproj", "{3708B5F8-060D-432B-8DF2-C25EF2D331F0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OAuth", "OAuth", "{5A40EE8B-FD54-4F73-B6DB-0584C12C2D04}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.OAuth.Server", "src\Services\OAuth\CSharp.OAuth.Server\CSharp.OAuth.Server.csproj", "{7B8E5BB1-91B5-4AD1-A254-68468807C117}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.OAuth.Server", "src\Services\OAuth\CSharp.OAuth.Server\CSharp.OAuth.Server.csproj", "{7B8E5BB1-91B5-4AD1-A254-68468807C117}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Utilities", "src\Core\CSharp.Utilities\CSharp.Utilities.csproj", "{80EDCA27-8143-4F30-98CB-477033F28899}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Utilities", "src\Core\CSharp.Utilities\CSharp.Utilities.csproj", "{80EDCA27-8143-4F30-98CB-477033F28899}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Core", "src\Core\CSharp.Core\CSharp.Core.csproj", "{B3128183-37EE-415E-8C08-23702AC7A51C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CSharp.Core", "src\Core\CSharp.Core\CSharp.Core.csproj", "{B3128183-37EE-415E-8C08-23702AC7A51C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MvcClient", "MvcClient", "{3B83E2D7-1716-431B-9A39-D68F8CF9C975}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.MvcClient", "src\Webs\MvcClient\CSharp.MvcClient\CSharp.MvcClient.csproj", "{62F4A382-4FEF-4852-A12F-81BAA9A48BC7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharp.Web.MVC", "src\Webs\MvcClient\CSharp.Web.MVC\CSharp.Web.MVC.csproj", "{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCharp.Web.MVC.3.0", "src\Webs\MvcClient\SCharp.Web.MVC.3.0\SCharp.Web.MVC.3.0.csproj", "{E1898846-61F8-4440-80ED-B6777330F711}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +55,14 @@ Global
 		{B3128183-37EE-415E-8C08-23702AC7A51C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B3128183-37EE-415E-8C08-23702AC7A51C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B3128183-37EE-415E-8C08-23702AC7A51C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62F4A382-4FEF-4852-A12F-81BAA9A48BC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62F4A382-4FEF-4852-A12F-81BAA9A48BC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62F4A382-4FEF-4852-A12F-81BAA9A48BC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62F4A382-4FEF-4852-A12F-81BAA9A48BC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1898846-61F8-4440-80ED-B6777330F711}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1898846-61F8-4440-80ED-B6777330F711}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1898846-61F8-4440-80ED-B6777330F711}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1898846-61F8-4440-80ED-B6777330F711}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -74,7 +80,8 @@ Global
 		{80EDCA27-8143-4F30-98CB-477033F28899} = {F3241466-5490-4359-9292-881DDFEDE5F4}
 		{B3128183-37EE-415E-8C08-23702AC7A51C} = {F3241466-5490-4359-9292-881DDFEDE5F4}
 		{3B83E2D7-1716-431B-9A39-D68F8CF9C975} = {92415E98-7154-4339-929A-EB119946BA5C}
-		{62F4A382-4FEF-4852-A12F-81BAA9A48BC7} = {3B83E2D7-1716-431B-9A39-D68F8CF9C975}
+		{B1DD09BC-71DB-47CD-BC4E-88748DCBCE6C} = {3B83E2D7-1716-431B-9A39-D68F8CF9C975}
+		{E1898846-61F8-4440-80ED-B6777330F711} = {3B83E2D7-1716-431B-9A39-D68F8CF9C975}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F2591052-7D33-4A4B-A513-DE55D9701AB0}

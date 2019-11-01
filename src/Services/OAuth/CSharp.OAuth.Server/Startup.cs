@@ -37,6 +37,10 @@ namespace CSharp.OAuth.Server
 
             services.AddTransient<CSharpOAuthServerMigration>();
             //services.AddSwashbuckle(Configuration);
+            services.AddSpaStaticFiles(configuration =>
+            {
+                configuration.RootPath = "ClientApp/dist";
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -50,6 +54,9 @@ namespace CSharp.OAuth.Server
             migration.InitData();
 
             //app.UseSwashbuckle(Configuration);
+            app.UseStaticFiles();
+           
+            app.UseSpaStaticFiles();
 
             app.UseAuthorization();
 
@@ -69,6 +76,8 @@ namespace CSharp.OAuth.Server
 
                 endpoints.MapRazorPages();
             });
+
+            app.UseSpa(spa => spa.Options.SourcePath = "ClientApp");
         }
     }
 }

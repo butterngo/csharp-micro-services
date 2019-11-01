@@ -1,0 +1,77 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\dev\\netcore3.0\\csharp-micro-services\\src\\Webs\\MvcClient\\SCharp.Web.MVC.3.0\\SCharp.Web.MVC.3.0.csproj": {}
+  },
+  "projects": {
+    "D:\\dev\\netcore3.0\\csharp-micro-services\\src\\Webs\\MvcClient\\SCharp.Web.MVC.3.0\\SCharp.Web.MVC.3.0.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\dev\\netcore3.0\\csharp-micro-services\\src\\Webs\\MvcClient\\SCharp.Web.MVC.3.0\\SCharp.Web.MVC.3.0.csproj",
+        "projectName": "SCharp.Web.MVC.3.0",
+        "projectPath": "D:\\dev\\netcore3.0\\csharp-micro-services\\src\\Webs\\MvcClient\\SCharp.Web.MVC.3.0\\SCharp.Web.MVC.3.0.csproj",
+        "packagesPath": "C:\\Users\\HOME\\.nuget\\packages\\",
+        "outputPath": "D:\\dev\\netcore3.0\\csharp-micro-services\\src\\Webs\\MvcClient\\SCharp.Web.MVC.3.0\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\HOME\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "D:\\dev\\CSharpJWT\\nuget": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.0": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.0": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+              "target": "Package",
+              "version": "[3.0.0, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[5.6.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

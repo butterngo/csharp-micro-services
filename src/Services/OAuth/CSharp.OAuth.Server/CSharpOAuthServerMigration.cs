@@ -102,9 +102,9 @@
             {
                 var user = new IdentityUser 
                 {
-                    UserName = "admin",
+                    UserName = "admin@c-sharp.vn",
                     Email="admin@c-sharp.vn",
-                    NormalizedUserName = "admin".ToUpper(),
+                    NormalizedUserName = "admin@c-sharp.vn".ToUpper(),
                     NormalizedEmail = "admin@c-sharp.vn".ToUpper()
                 };
 
