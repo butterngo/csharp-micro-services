@@ -1,7 +1,6 @@
 namespace CSharp.OAuth.Server
 {
     using CSharp.OAuth.Server.Extensions;
-    using Microsoft.AspNetCore.Authentication.OpenIdConnect;
     using Microsoft.AspNetCore.Builder;
     using Microsoft.AspNetCore.Hosting;
     using Microsoft.AspNetCore.Http;
@@ -21,9 +20,9 @@ namespace CSharp.OAuth.Server
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllers();
+            services.AddCors();
 
-            services.AddRazorPages();
+            services.AddControllersWithViews();
 
             services.AddSingleton(Configuration);
 
@@ -37,10 +36,10 @@ namespace CSharp.OAuth.Server
 
             services.AddTransient<CSharpOAuthServerMigration>();
             //services.AddSwashbuckle(Configuration);
-            services.AddSpaStaticFiles(configuration =>
-            {
-                configuration.RootPath = "ClientApp/dist";
-            });
+            //services.AddSpaStaticFiles(configuration =>
+            //{
+            //    configuration.RootPath = "ClientApp/dist";
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,30 +53,19 @@ namespace CSharp.OAuth.Server
             migration.InitData();
 
             //app.UseSwashbuckle(Configuration);
+
             app.UseStaticFiles();
            
-            app.UseSpaStaticFiles();
+            //app.UseSpaStaticFiles();
 
             app.UseAuthorization();
 
             app.UseIdentityServer();
 
-            app.UseRouting();
+            app.UseCors(Configuration);
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            app.UseRouting(Configuration);
 
-                endpoints.MapAreaControllerRoute(
-                   name: "areas", "areas",
-                   pattern: "{area:exists}/{controller=Account}/{action=SignIn}/{id?}");
-
-                endpoints.MapRazorPages();
-            });
-
-            app.UseSpa(spa => spa.Options.SourcePath = "ClientApp");
         }
     }
 }
