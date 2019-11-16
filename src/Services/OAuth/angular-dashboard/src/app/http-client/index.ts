@@ -16,7 +16,7 @@ export interface IRequestOptions {
   withCredentials?: boolean;
   body?: any;
 }
-
+//https://jasonwatmore.com/post/2019/06/22/angular-8-jwt-authentication-example-tutorial
 export function HttpClientStandardCreator(http: HttpClient) {
   return new HttpClientStandard(http);
 }

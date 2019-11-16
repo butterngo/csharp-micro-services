@@ -5,7 +5,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { HttpClientProvider } from '../app/http-client';
 import { declarations, routers } from './routers';
 import { AppComponent } from './app.component';
-
+import { MatTableModule } from '@angular/material'
 declarations.push(AppComponent)
 
 @NgModule({
@@ -14,6 +14,7 @@ declarations.push(AppComponent)
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
+    MatTableModule,
     routers
   ],
   providers: [HttpClientProvider],
