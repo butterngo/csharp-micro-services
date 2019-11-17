@@ -1,3 +1,4 @@
+import { AppComponent } from './app.component';
 import { NavMenuComponent } from './nav-menu/nav-menu.component';
 import { ClientComponent } from './client/client.component';
 import { CounterComponent } from './counter/counter.component';
@@ -5,8 +6,6 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { RouterModule } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import { SimpleTable } from '../components';
-
 
 @Injectable({ providedIn: 'root' })
 class AuthGuard implements CanActivate {
@@ -30,11 +29,11 @@ class AuthGuard implements CanActivate {
 }
 
 export const declarations = [
+  AppComponent,
   NavMenuComponent,
   ClientComponent,
   CounterComponent,
-  FetchDataComponent,
-  SimpleTable
+  FetchDataComponent
 ]
 
 export const routers = RouterModule.forRoot([

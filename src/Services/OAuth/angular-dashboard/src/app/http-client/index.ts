@@ -27,7 +27,7 @@ export class HttpClientStandard {
 
   private api = 'http://localhost:5000';
 
-  public constructor(public http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   public Get<T>(endPoint: string, options?: IRequestOptions): Observable<T> {
